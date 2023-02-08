@@ -1,0 +1,8 @@
+.input {
+  padding: 7px;
+}
+
+.input_error {
+  border: 1px solid yellow;
+  outline: none;
+}
