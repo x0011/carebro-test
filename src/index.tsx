@@ -12,6 +12,8 @@ import { InputPage } from './pages/input';
 import { ArraySort } from './components/array';
 import { ArraysPage } from './pages/arrays';
 
+const getBasename = (path: string) => path.slice(0, path.lastIndexOf('/'));
+
 const BrowserRouter = createBrowserRouter([
   {
     path:'/',
@@ -25,7 +27,7 @@ const BrowserRouter = createBrowserRouter([
     path:'/sort',
     element: <ArraysPage />
   }
-]);
+], {basename:getBasename(window.location.pathname)});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
